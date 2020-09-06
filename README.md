@@ -1,38 +1,47 @@
 # simple-yt-backup
 
-KISS CLI tool to download public videos, thumbnails and descriptions
-from YouTube channel.
+A simple script that I created to download videos, thumbnails and descriptions
+from my YouTube channel.
 
 ## Features
 
 - Download all videos with a single command
-- Resume interrupted downloads (just run the same command again)
-- Simple (~60 lines of code)
-- Automatically restart a video download in case of Python exception
-  - EG: in case of `ERROR: unable to download video data: <urlopen error [Errno -2] Namer or service not known>`
+- Automatically restart a download in case of a Python exception*
+- Resume partial downloads (just run the same command again)
 
-## Dependencies
+*Eg: in case of:
 
-Before using this script you need to install:
+```bash
+ERROR: unable to download video data: <urlopen error [Errno -2] Namer or service not known>
+```
 
-- Python 3
-- Virtualenv
-- pip
+## Download and install dependencies
 
-## Run
+Make sure you have Python 3, git and
+[Virtualenv](https://virtualenv.pypa.io/en/latest/)
+already installed on your OS.
+
+Then enter this commands in your terminal:
 
 ```sh
-git clone ...
+git clone https://github.com/davcri/simple-yt-backup
+cd simple-yt-backup
 virtuanlenv env
-source bin/env/activate
+source env/bin/activate
 pip install -r requirements.txt
-
-# open main.py
-xdg-open main.py # set YT_CHANNEL variable (the URL of a YouTube channel)
-
-# execute the script
-python main.py
 ```
+
+## Run it
+
+1. Open `simple-yt-backup.py`
+2. Insert the URL of a YouTube channel in the variable `YT_CHANNEL`
+3. [optional] define `YEAR` if you want to download only videos from a specific year
+4. Save the file
+5. Run it: `python main.py`
+
+## Thanks
+
+- youtube_dl
 
 ## Extra
 
