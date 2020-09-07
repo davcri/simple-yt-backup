@@ -37,7 +37,7 @@ pip install -r requirements.txt
 2. Set the URL of a YouTube channel in the variable `YT_CHANNEL`
 3. [optional] Set `YEAR` variable if you want to download only videos from a specific year
 4. Save the file
-5. Run it: `python main.py`
+5. Run it: `python simple-yt-backup.py`
 
 ## Thanks
 
