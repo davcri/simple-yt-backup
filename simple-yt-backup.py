@@ -8,7 +8,7 @@ import sys
 
 # Change this link to the channel that you want to backup
 YT_CHANNEL = "https://www.youtube.com/channel/UCFVgUrvckqp0i_pbCj3wjfA"
-YEAR = None  # set None if you want to download everything. Set the year (YYYY, eg: `2019` integer) if you want to download only videos from a specific year.
+YEAR = 2020  # set None if you want to download everything. Set the year (YYYY, eg: `2019` integer) if you want to download only videos from a specific year.
 DOWNLOAD_DIR = "videos-{}".format(YEAR) if YEAR != None else "videos"
 
 
