@@ -1,1 +1,4 @@
-youtube-dl==2021.1.3
+mutagen==1.45.1
+pycryptodomex==3.14.1
+websockets==10.2
+yt-dlp==2022.2.4

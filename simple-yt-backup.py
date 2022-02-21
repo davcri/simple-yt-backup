@@ -1,14 +1,14 @@
 from datetime import datetime
 from pathlib import Path
-from youtube_dl import DateRange
+from yt_dlp import DateRange
 
-import youtube_dl
+import yt_dlp
 import os
 import sys
 
 # Change this link to the channel that you want to backup
 YT_CHANNEL = "https://www.youtube.com/channel/UCFVgUrvckqp0i_pbCj3wjfA"
-YEAR = 2020  # set None if you want to download everything. Set the year (YYYY, eg: `2019` integer) if you want to download only videos from a specific year.
+YEAR = 2021  # set None if you want to download everything. Set the year (YYYY, eg: `2019` integer) if you want to download only videos from a specific year.
 DOWNLOAD_DIR = "videos-{}".format(YEAR) if YEAR != None else "videos"
 
 
@@ -25,7 +25,7 @@ def force_dowload(video_url, opts):
     This function detects the error and call again itself, continuing the download process
     """
     try:
-        with youtube_dl.YoutubeDL(opts) as ydl:
+        with yt_dlp.YoutubeDL(opts) as ydl:
             ydl.download([video_url])
     except KeyboardInterrupt:
         sys.exit()
